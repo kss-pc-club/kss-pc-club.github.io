@@ -21,5 +21,8 @@ In this column, we will discuss in Japanese.
 このページを、あなたの知識でどんどん良いものにしていってください。  
 お願いします。
 
+ちなみに、全ページで読み込まれるであろうファイルたちは `/common/` にまとめてあります。
+詳しくは `/common/common.html` を参照。
+
 ## TODO
  - [ ] index.html の作成
