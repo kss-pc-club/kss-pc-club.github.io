@@ -7,7 +7,7 @@ This GitHub Organization is owned by KSS PC Club Students.
 
 ## Web Page
 This web page is Open-Source.  
-You can see this preview [Here](https://kss-pc-club.github.io/).
+See [Here](https://kss-pc-club.github.io/) to see how it works.
 
 ## For Developer of KSS PC Club
 In this column, we will discuss in Japanese.
@@ -17,3 +17,9 @@ In this column, we will discuss in Japanese.
 
 また、編集する前やPushする前に、*必ずPullしてください* 。  
 上記の理由のためです。
+
+このページを、あなたの知識でどんどん良いものにしていってください。  
+お願いします。
+
+## TODO
+ - [ ] index.html の作成
