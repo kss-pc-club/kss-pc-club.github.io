@@ -1,1 +1,9 @@
-/* No CSS *//*# sourceMappingURL=header.css.map */
+header {
+  background: #eee;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 64px; }
+
+/*# sourceMappingURL=header.css.map */
