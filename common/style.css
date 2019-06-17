@@ -1,16 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
 
+*{ box-sizing: border-box; }
+
 html, body{
     margin: 0px;
     padding: 0px;
 }
 body{
+    --headerHeight: 64px;
+    --footerHeight: 50px;
     font-family: 'Noto Sans JP', sans-serif;
     display: grid;
     grid-template-areas: "header" "main" "footer";
-    grid-template-rows: 64px auto auto;
+    grid-template-rows: var(--headerHeight) auto var(--footerHeight);
 }
-header{ grid-area: header; } footer{ grid-area: footer; }
+header{ height: var(--headerHeight); grid-area: header; } footer{ height: var(--footerHeight); grid-area: footer; }
 main{
     grid-area: main;
+    min-height: calc(100vh - var(--headerHeight) - var(--footerHeight));
+    padding: 16px;
+}
+h1,h2{
+    text-align: center;
+}
+a{
+    color: #555;
+}
+
+@media screen and (max-width: 700px){
+    body{
+        --headerHeight: 48px;
+    }
 }

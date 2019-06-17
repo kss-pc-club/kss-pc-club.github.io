@@ -4,6 +4,40 @@ header {
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 64px; }
+  height: 64px;
+  font-size: 40px;
+  padding: 12px;
+  font-weight: lighter;
+}
 
+header ul {
+  list-style: none;
+  display: block;
+  width: 100vw;
+  margin: 0px;
+}
+
+header ul li {
+  display: inline-block;
+  min-width: 85px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0px 30px;
+  font-size: 28px;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    height: 48px;
+    font-size: 32px;
+    padding: 8px;
+  }
+  header ul li {
+    display: block;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+  }
+}
 /*# sourceMappingURL=header.css.map */
