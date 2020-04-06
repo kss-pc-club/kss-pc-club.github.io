@@ -1,50 +1,53 @@
-# Get started building your personal website
+# 個人のWebサイトを建てよう！
 
-### Showcase your software development skills
+### ソフトウェア開発スキルを披露しよう！
 
-This repository gives you the code you'll need to kickstart a personal website that showcases your work as a software developer. And when you manage the code in a GitHub repository, it will automatically render a webpage with the owner's profile information, including a photo, bio, and repositories.
+このリポジトリは、ソフトウェア開発者としてのあなたの作品を展示する、個人のWebサイトをキックスタートするのに必要なコードを提供します。そして、GitHubリポジトリ中のコードを変更したときは、管理者の写真、説明欄、リポジトリといったプロフィール情報を、Webページは自動的に更新します。
 
-Your personal website is waiting to be personalized, though. It includes space to highlight your specific areas of interest in software development, like languages or industries. And it's standing by to publish your next great blog post.
+しかし、あなたの個人のWebサイトはカスタマイズされるのを待っています。言語や業界など、ソフトウェア開発に興味がある特定の分野を強調するスペースがあります。そして、あなたの素晴らしいブログ記事を公開されるのを待っています。
 
-It's all possible using the combination of [Jekyll](https://jekyllrb.com/docs/) (for building your website), [GitHub Pages](https://pages.github.com/) (for hosting your website), and [GitHub's API](https://developer.github.com/v3/) (for automatically populating your website with content).
+これらはすべて、以下の3つのサービスを組み合わせることで可能です。
+ - Webサイトの構築：[Jekyll](https://jekyllrb.com/docs/)
+ - サイトのホスティング：[GitHub Pages](https://pages.github.com/)
+ - コンテンツの自動埋め込み：[GitHub's API](https://developer.github.com/v3/)
 
-## Installation
+## インストールしよう！
 
-### Fork the `github/personal-website` repo
+### `github/personal-website` Repository をForkする
 
-You'll be making your own copy of the "personal website starter" repository so you have your own project to customize. A "fork" is a copy of a repository. So select "Fork" atop [the `github/personal-website` repository](https://github.com/github/personal-website).
+「個人のWebサイトスターター」Repoのコピーを自分で作ることになるので、自分だけのプロジェクトをカスタマイズすることが可能です。「Fork」というのは、Repoをコピーすることです。では早速、[`github/personal-website` Repo](https://github.com/github/personal-website)のページ上部「Fork」を選択しましょう。
 
-Once you've found a home for your forked repository, it's yours. You're the owner, so you're ready to publish, if you wish.
+ForkしたRepoを見つけたらもう、それはあなたのものです。あなたが所有者なので、望むなら公開することだってできます。
 
-### Install in your local development environment
+### ローカルの開発環境にインストールする
 
-If you want to manage your website in a local web development environment, you'll be using [Ruby](https://jekyllrb.com/docs/installation/).
+ローカルのWeb開発環境でWebサイトを管理したいなら、[Ruby](https://jekyllrb.com/docs/installation/)を使用することになります。
 
-Once you've found a home for your forked repository, **[clone it](https://help.github.com/articles/cloning-a-repository/)**.
+ForkしたRepoを見つけたら、**[Cloneしましょう](https://help.github.com/articles/cloning-a-repository/)**。「Clone」とは、ざっくり言えば、オンラインにあるソースを**そのまま**ローカルに落とすことです。ファイルはもちろん、変更履歴だって複製されます。
 
-#### Install Jekyll
+#### Jekyllをインストールする
 
-Jekyll is a [Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems) that can be installed on most systems.
+Jekyllは、ほとんどのシステムにインストールできる、[Ruby Gem](https://jekyllrb.com/docs/ruby-101/#gems)です。
 
-1. Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/)
-2. Install Jekyll and [bundler](https://jekyllrb.com/docs/ruby-101/#bundler) [gems](https://jekyllrb.com/docs/ruby-101/#gems)
+1. [Ruby開発環境](https://jekyllrb.com/docs/installation/)すべてをインストールします。
+2. Jekyllと[bundler](https://jekyllrb.com/docs/ruby-101/#bundler)、[gems](https://jekyllrb.com/docs/ruby-101/#gems)をインストールします。
 ```
 gem install jekyll bundler
 ```
-3. Change into your new directory
+3. ディレクトリを移動します。
 ```
 cd personal-website
 ```
-4. Install missing gems
+4. 不足しているGem（依存関係）をインストールします。
 ```
 bundle install
 ```
-5. Build the site and make it available on a local server
+5. サイトを構築し、ローカルサーバーで立ち上げます。
 ```
 bundle exec jekyll serve
 ```
 
-You should see something like:
+こんなものが見えると思います:
 
 ```
 Configuration file: /octocat/personal-website/_config.yml
@@ -59,63 +62,63 @@ Configuration file: /octocat/personal-website/_config.yml
   Server running... press ctrl-c to stop.
 ```
 
-Don't worry about the "No GitHub API authentication could be found" message. [API authentication is only necessary](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md) if you intend to display more detailed metadata, like a branch name.
+"No GitHub API authentication could be found" というメッセージは気にしないでください。[API認証](https://github.com/jekyll/github-metadata/blob/master/docs/authentication.md)は、ブランチ名など、より詳細なデータを表示したい場合に必要なだけです。
 
-6. Now browse to [http://localhost:4000](http://localhost:4000)
+6. では、[http://localhost:4000](http://localhost:4000) を開きましょう。
 
-### Publish
+### 公開する
 
-When you host your personal website's code on GitHub, you get the support of free hosting through GitHub Pages.
+個人のWebサイトのコードをGitHubでホスティングすると、GitHub Pagesを通して無料でサポートを受けることができます。
 
-**The fastest approach** is to rename your repository `username.github.io`, where `username` is your GitHub username (or organization name). Then, the next time you push any changes to your repository's `master` branch, they'll be accessible on the web at your `username.github.io` address.
+**一番手っ取り早い方法**は、Repoの名前を `username.github.io` に変更することです（`username`には、あなたもしくは組織のGitHubユーザー名が入ります）。次に、Repoの `master` ブランチに変更をあげると、Web上で `username.github.io` にアクセスできるようになります。
 
-**If you want to use a custom domain**, you'll want to add it to your repository's "Custom domain" settings on github.com. And then register and/or [configure your domain with a DNS provider](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
+**もしカスタムドメインを使いたいなら、**GitHubのRepoの、Settingsタブにある「Custom domain」に追加してください。そして、[DNSプロバイダーにドメインを追加(and/or)設定](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/)しましょう。
 
-## Customization
+## カスタマイズ
 
-It's your website, and you control the source code. So you can customize everything, if you like. But we've provided a handful of quick customizations for you to consider as you get your website off the ground.
+これはあなたのWebサイトで、ソースコードもあなたが管理しています。そのため、あなたが望むなら、すべてをカスタマイズできます。ここでは簡単なカスタマイズ方法をいくつかご紹介します。
 
-### Quick configuration changes
+### 簡単な設定
 
-Most customizations can be done in a matter of seconds, by revising your repository's `_config.yml` file. Just remember to restart your local server each time you save new changes so your Jekyll-powered website rebuilds correctly:
+ほとんどのカスタマイズは、Repo内の `_config.yml` ファイルを修正して、数秒のうちに行うことができます。新しい変更を保存するたびにローカルサーバーを再起動するのを忘れないように！素晴らしいWebサイトが正しく再構築されないかもしれません。方法は以下の通りです。
 
-1. Shut down your server by entering the keyboard command <kbd>CTRL</kbd>+<kbd>c</kbd>
-2. Restart your server: `bundle exec jekyll serve`
+1. <kbd>CTRL</kbd>+<kbd>c</kbd>を入力してサーバーをシャットダウンします。
+2. `bundle exec jekyll serve`でサーバーを再起動します。
 
 
-#### Layout
+#### レイアウト
 
-Your website will display in a two-column layout by default on larger-screen devices, with your photo, name, and basic information displayed in a left-aligned "sidebar." You can quickly switch to a "stacked" single-column layout by changing the line in your `_config.yml` file that reads `layout: sidebar` to `layout: stacked`.
+あなたのWebサイトは、大画面のデバイスでは、デフォルトでは2列のレイアウトで表示され、写真、名前、基本情報は左寄せの「サイドバー」に表示されます。この場合、`_config.yml`内の `layout: sidebar` の行を `layout: stacked` に変更することで、「スタック型」の、1列のレイアウトに素早く切り替えることができます。
 
-#### Style
+#### スタイル
 
-Your website appears with a "light" white and gray background by default, with dark text. You can quickly switch to a "dark" background with white text by changing the line in your `_config.yml` file that reads `style: light` to `style: dark`.
+あなたのWebサイトは、デフォルトでは白とグレーの「明るい」背景に、「暗い」テキストが表示されます。`_config.yml` の `style: light` の行を `style: dark` に変更することで、背景を「暗く」、テキストを「白く」することができます。
 
-#### Projects
+#### プロジェクト
 
-The "My Projects" section of your website is generated by default with your nine most recently "pushed" repositories. It also excludes repositories that you forked, by default. But each of these parameters can be quickly customized in your repository's `_config.yml` file, under the `projects` dictionary line.
+「My Projects」（注：PC部のWebサイトでは「Our Projects」）セクションは、デフォルトでは、「最近変更された9つのRepo」で生成されます。また、Forkしたものは除外されています。しかし、これらのパラメータは、 `_config.yml` の `projects` 辞書行ですぐにカスタマイズできます。
 
-Parameters include:
+パラメータには、以下のようなものがあります:
 
-- `sort_by`: The method by which repositories are sorted. Options include `pushed` and `stars`.
-- `limit`: The maximum number of repositories that will be displayed in the "My Projects" section of your website. Out of the box, this number is set to `9`.
+- `sort_by`: ソートされる方法。`pushed`（更新順） or `stars`（Star数）.
+- `limit`: セクションに表示される最大のRepoの個数。初期状態では、`9`に設定されています。
 - `exclude`:
-   - `forks`: When `true`, repositories you've forked will be excluded from the listing.
-   - `projects`: A list the repository names you want to exclude from the listing.
+   - `forks`: `true`の場合、Forkしたものは除外されます。
+   - `projects`: 除外したいRepo名のリスト。
 
 #### Topics
 
-Your website comes pre-configured with three topics (e.g. "Web design" and "Sass") that appear in a section titled "My Interests." These are also stored in your repository's `_config.yml` file, where you can define each topic's name and two other optional details:
+あなたのWebサイトには、3つのトピックがあらかじめ設定されており、「My Interests」（注：PC部のWebサイトでは「Our Interests」）セクションに表示されます。`_config.yml` ファイルには各トピックの名前と2つのオプションの詳細を定義できます。
 
-- `web_url`: The web address you'd like to your topic to link to (e.g. `https://github.com/topics/sass`).
-- `image_url`: The web address of an (ideally square) image that you'd like to appear with your topic.
+- `web_url`: トピックにリンクするアドレス (例: `https://github.com/topics/sass`)。
+- `image_url`: トピックと表示する（理想では正方形の）画像。
 
-#### Social media
+#### ソーシャルメディア
 
-Your website supports linking and sharing to social media services you're using, including Behance, Dribbble, Facebook, LinkedIn, Medium, Stack Overflow, Twitter, and YouTube. To identify the services you use:
+Behance、Dribbble、Facebook、LinkedIn、Medium、Stack Overflow、Twitter、YouTubeなど、あなたが利用しているSNSへのリンク共有をサポートしています。
 
-1. Edit your repository's `_config.yml` file.
-2. Edit the `social_media` dictionary line, and represent the services you like in a simple `key: value` form:
+1. `_config.yml` のファイルを開きます。
+2. `social_media` 辞書行を編集し、好きなサービスを `key: value` 形式で保存します。以下がその例です。
 
 ```
 social_media:
@@ -136,22 +139,22 @@ social_media:
   youtube: your_username
 ```
 
-Links to your profile for each of the services you define will appear in the `<header>` of your website, appended to your bio. And if those services support sharing, any blog posts that you publish will include links to share that post using each social media service.
+あなたが定義した各サービスのプロフィールへのリンクは、`<header>`に表示され、あなたの説明欄に追加されます。また、それらのサービスが共有をサポートしている場合、あなたが公開するブログ記事には、各サービスを使ってその記事を共有するためのリンクが含まれます。
 
-**Note**: This feature is supported by two files in your repository:
+**注**: この機能はRepo内の2ファイルでサポートされています:
 
-- `/_data/social_media.yml`: Defines each of the supported services, including variable name, display name, URL path, and SVG icon.
-- `/_includes/social_media_share_url.html`: Outputs the share URL required for any of the supported social media services that support sharing URLs.
+- `/_data/social_media.yml`: 変数名、表示名、URL、SVGアイコンなど、サポートする各サービスを定義します。
+- `/_includes/social_media_share_url.html`: 共有URLに対応しているSNSのいずれかに必要なURLを出力します。
 
-If you're interested in adding a social media service that's not already supported in this repo, you can edit these two files to build that support.
+このRepoでまだサポートされていないSNSを追加したい場合には、これら2つのファイルを編集してサポートを構築してください。
 
-## Adding pages
+## ページを追加する
 
-To **add a page** to your website (e.g. detailed resume):
+**ページを追加する**には (例えば、詳細な履歴書など):
 
-1. Create a new `.html` or `.md` file at the root of your repository.
-2. Give it a filename that you want to be used in the page's URL (e.g. `http://yoursite.dev/filename`).
-3. At the start of your file, include the following [front matter](https://jekyllrb.com/docs/front-matter/):
+1. 新しい `.html` or `.md` ファイルをRepoのルートに作成します。
+2. URLに使用したいファイル名を指定します。(例: `http://yoursite.dev/filename`)
+3. ファイルの先頭に以下の[front matter](https://jekyllrb.com/docs/front-matter/)を加えます:
 
 ```
 ---
@@ -159,22 +162,22 @@ layout: default
 ---
 ```
 
-## Adding blog posts
+## ブログ記事を追加する
 
-To **add a blog post** to your website:
+**ブログ記事を追加する**には:
 
-1. Create a new `.md` file in your repository's `/_posts/` directory.
-2. Give it a filename using the following format:
+1. 新しい`.md`ファイルを `/_posts/` に作成します。
+2. ファイル名を以下のフォーマットで指定します。:
 
 ```
-YEAR-MONTH-DAY-title.MARKUP
+{年}-{月}-{日}-{タイトル}.md
 ```
 
-3. At the start of your file, include the following [front matter](https://jekyllrb.com/docs/front-matter/):
+3. ファイルの先頭に以下の[front matter](https://jekyllrb.com/docs/front-matter/)を加えます:
 
 ```
 ---
-title: "The title of my blog post"
+title: "ブログ記事のタイトル"
 ---
 ```
 
